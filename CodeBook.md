@@ -1,12 +1,21 @@
-  ```setwd("UCI HAR Dataset")```
+## Codebook
+Download the archive and unzip it to the default working directory
 
-## Load and merge train set columns
-  ```
-  subject <- read.table("train/subject_train.txt")`
-  X <- read.table("train/X_train.txt")
-  Y <- read.table("train/y_train.txt")
-  train <- cbind(subject, X, Y)
-  ```
+Change the working directory to the archive root
+```setwd("UCI HAR Dataset")```
+
+## Creating base dataset
+Load columns that will form the training dataset
+```
+subject <- read.table("train/subject_train.txt")`
+X <- read.table("train/X_train.txt")
+Y <- read.table("train/y_train.txt")
+```
+Merge these columns together
+```
+train <- cbind(subject, X, Y)
+```
+  
 
 
 ## Load and merge test set columns
