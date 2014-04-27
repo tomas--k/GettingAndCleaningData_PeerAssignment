@@ -1,4 +1,4 @@
-# Codebook
+# Codebook 
 This document provides detailed explanation of the steps performed by run_analysis.R. To be able to run this script, the archive has to be downloaded and unzipped to the default working directory.
 
 ## Setting the working directory...
