@@ -1,13 +1,13 @@
 setwd("UCI HAR Dataset")
 
-## Merge train set columns
+## Load and merge train set columns
 subject <- read.table("train/subject_train.txt")
 X <- read.table("train/X_train.txt")
 Y <- read.table("train/y_train.txt")
 train <- cbind(subject, X, Y)
 #head(train)
 
-## Merge test set columns
+## Load and merge test set columns
 subject <- read.table("test/subject_test.txt")
 X <- read.table("test/X_test.txt")
 Y <- read.table("test/y_test.txt")
@@ -18,7 +18,7 @@ test <- cbind(subject, X, Y)
 data <- rbind(train, test)
 
 
-## Add names to columns
+## Load names and add them to columns
 features <- read.table("features.txt")
 names(data) <- c('subject', as.character(features$V2), 'activityNumber')
 #head(data)
@@ -43,5 +43,5 @@ averages <- melt(data2, id = c('activity', 'subject'))
 averages <- dcast(averages, activity + subject ~ variable, mean)
 #head(averages)
 
-## Save the dataset
+## Save the tidy dataset
 write.table(averages, "averages.txt")
