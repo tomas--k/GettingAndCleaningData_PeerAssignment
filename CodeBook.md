@@ -1,7 +1,7 @@
-  `setwd("UCI HAR Dataset")`
+  ```setwd("UCI HAR Dataset")```
 
 ## Load and merge train set columns
-  ```{r}
+  ```
   subject <- read.table("train/subject_train.txt")`
   X <- read.table("train/X_train.txt")
   Y <- read.table("train/y_train.txt")
