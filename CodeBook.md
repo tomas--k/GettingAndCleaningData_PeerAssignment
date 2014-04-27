@@ -2,7 +2,9 @@
 Download the archive and unzip it to the default working directory
 
 Change the working directory to the archive root
-```setwd("UCI HAR Dataset")```
+```
+setwd("UCI HAR Dataset")
+```
 
 ## Creating base dataset
 Load columns that will form the training dataset
@@ -15,19 +17,22 @@ Merge these columns together
 ```
 train <- cbind(subject, X, Y)
 ```
-  
+Load columns that will form the testing dataset  
 
-
-## Load and merge test set columns
+```
 subject <- read.table("test/subject_test.txt")
 X <- read.table("test/X_test.txt")
 Y <- read.table("test/y_test.txt")
+```
+Merge these columns together
+```
 test <- cbind(subject, X, Y)
+```
 
-
-## Append test and train set rows
+Append test and train set rows
+```
 data <- rbind(train, test)
-
+```
 
 ## Load names and add them to columns
 features <- read.table("features.txt")
