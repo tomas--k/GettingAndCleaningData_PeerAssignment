@@ -1,52 +1,59 @@
 ## Codebook
-Download the archive and unzip it to the default working directory
+This document provides detailed explanation of the steps performed by run_analysis.R. To be able to run this script, the archive has to be downloaded and unzipped to the default working directory.
 
-Change the working directory to the archive root
+Change the working directory to the archive root:
 ```
 setwd("UCI HAR Dataset")
 ```
 
-## Creating base dataset
-Load columns that will form the training dataset
+## Merging the data...
+Load columns that will form the training dataset:
 ```
 subject <- read.table("train/subject_train.txt")`
 X <- read.table("train/X_train.txt")
 Y <- read.table("train/y_train.txt")
 ```
-Merge these columns together
+Merge these columns together:
 ```
 train <- cbind(subject, X, Y)
 ```
-Load columns that will form the testing dataset  
+Load columns that will form the testing dataset:
 
 ```
 subject <- read.table("test/subject_test.txt")
 X <- read.table("test/X_test.txt")
 Y <- read.table("test/y_test.txt")
 ```
-Merge these columns together
+Merge these columns together:
 ```
 test <- cbind(subject, X, Y)
 ```
 
-Append test and train set rows
+Append test and train set rows:
 ```
 data <- rbind(train, test)
 ```
 
-## Load names and add them to columns
+## Labelling the data...
+Load variable names: 
+```
 features <- read.table("features.txt")
+```
+Assign names to columns:
+```
 names(data) <- c('subject', as.character(features$V2), 'activityNumber')
+```
 
-
-## Create activity labels table
+Load activity labels and assign names to columns of the loaded data.frame:
+```
 activity_labels <- read.table("activity_labels.txt")
 names(activity_labels) <- c('activityNumber', 'activity')
+```
 
-
-## Add activity labels to data
+Assign names to activities
+```
 data <- merge(activity_labels, data, all = TRUE)
-
+```
 
 ## Extract only the measurements on the mean and standard deviation for each measurement 
 ## Get only the actvity label, subject and columns with mean() or std() in their name
