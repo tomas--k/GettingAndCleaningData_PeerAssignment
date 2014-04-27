@@ -72,7 +72,8 @@ Cast the molten data frame back with calculating the average for each activity a
 ```
 averages <- dcast(averages, activity + subject ~ variable, mean)
 ```
-Save the tidy dataset
+##Saving the dataset...
+Finally:
 ```
 write.table(averages, "averages.txt")
 ```
