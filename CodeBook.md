@@ -30,7 +30,7 @@ Merge these columns together:
 test <- cbind(subject, X, Y)
 ```
 
-Append test and train set rows:
+Merge the rows of the training and testing datasets together:
 ```
 data <- rbind(train, test)
 ```
