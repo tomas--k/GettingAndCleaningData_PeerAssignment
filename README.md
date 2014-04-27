@@ -19,3 +19,7 @@ The archive contains several files into which the dataset is fragmented.
 * CodeBook.md: markdown file describing the variables, the data, and any transformations or work that were performed to clean up the data
 * README.md [this file]: markdown file with the basic overview of this repo's content and the assignment 
 
+
+## References
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
