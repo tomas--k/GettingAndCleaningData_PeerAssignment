@@ -1,5 +1,5 @@
 # Getting and Cleaning Data: Peer Assignment
-*This repo contains files necessary for passing the Getting and Cleaning Data module at Coursera.org
+This repo contains files necessary for passing the Getting and Cleaning Data module at Coursera.org
 
 ## Description
 1. Merges the training and the test sets to create one data set.
