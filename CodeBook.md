@@ -44,7 +44,7 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 ```
 
-##Transformations and other data preparation work
+##Transformations and other data preparation work 
 
 This document provides detailed explanation of the steps performed by run_analysis.R. To be able to run this script, the archive has to be downloaded and unzipped to the default working directory.
 
